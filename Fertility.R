@@ -11,7 +11,9 @@ library(rpart.plot)
 options(digits = 5)
 
 #We have used data from https://archive.ics.uci.edu/ml/datasets/Fertility
-diagnosis <- read.csv("dataset/fertility_diagnosis.csv", header = TRUE )
+url_csv <- 'https://raw.githubusercontent.com/medeag/fertility-capstone/main/dataset/fertility_diagnosis.csv'
+diagnosis <-read.csv(url_csv, header = TRUE)
+#diagnosis <- read.csv("dataset/fertility_diagnosis.csv", header = TRUE )
 
 
 dim(diagnosis)
