@@ -115,6 +115,8 @@ test_set_x <- x[test_index,]
 test_set_y <- y[test_index]
 train_set_x <- x[-test_index,]
 train_set_y <- y[-test_index]
+# number of case: normal vs altered in train set
+table(train_set_y)
 ```
 
 Before we move forward, we need to answer the question: can we reduce the number of features without losing much of the variance in the data?
