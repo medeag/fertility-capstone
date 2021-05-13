@@ -41,15 +41,15 @@ hist(diagnosis_n$Age, main = "Age Frequency (Normal)", xlab = "Age")
 # we have not used sample.kind="Rounding" on the seed,
 # since we find it redundant to be compatible with 3.5
 set.seed(197379245)
-y<-diagnosis$Output
-x <- diagnosis[-10]
+y<-diagnosis$Output # output
+x <- diagnosis[-10] # variables 
 
 #split data into train and test sets, with 70% and 30% respectively
 test_index <- createDataPartition(y, times = 1, p = 0.3, list = FALSE)
-test_set_x <- x[test_index, ]
-test_set_y <- y[test_index]
-train_set_x <- x[-test_index,]
-train_set_y <- y[-test_index]
+test_set_x <- x[test_index, ] # test variable data
+test_set_y <- y[test_index] # test output
+train_set_x <- x[-test_index,] # train variable data
+train_set_y <- y[-test_index] # trian output
 
 # number of case: normal vs altered in train set
 table(train_set_y)
