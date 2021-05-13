@@ -175,7 +175,7 @@ results <- results %>% add_row(method = "K-NN",
                                accuracy = (mean(predictions==test_set_y)))
 
 # Evaluate Decision Tree on test data
-predictions <- predict(train_rf, test_set_x)
+predictions <- predict(train_rpart, test_set_x)
 results <- results %>% add_row(method = "Decision Tree", 
                                accuracy=(mean(predictions==test_set_y)))
 

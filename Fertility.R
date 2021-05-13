@@ -49,7 +49,7 @@ test_index <- createDataPartition(y, times = 1, p = 0.3, list = FALSE)
 test_set_x <- x[test_index, ] # test variable data
 test_set_y <- y[test_index] # test output
 train_set_x <- x[-test_index,] # train variable data
-train_set_y <- y[-test_index] # trian output
+train_set_y <- y[-test_index] # train output
 
 # number of case: normal vs altered in train set
 table(train_set_y)
@@ -99,7 +99,7 @@ results <- results %>% add_row(method = "K-NN", accuracy=(mean(predictions==test
 
 
 # Evaluate Decision Tree model on test data
-predictions <- predict(train_rf, test_set_x)
+predictions <- predict(train_rpart, test_set_x)
 results <- results %>% add_row(method = "Decision Tree", accuracy=(mean(predictions==test_set_y)))
 
 # Evaluate Random Forest model on test data
@@ -111,6 +111,3 @@ results
 
 #print max result method(s), in theory several method could give the same result (not in our case)
 results[which(results$accuracy == max(results$accuracy)),]$method
-
-
-
