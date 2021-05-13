@@ -1,5 +1,5 @@
 ---
-title: "Fertility Diagnosis"
+title: "Machine Learning for Fertility Diagnosis"
 author: "Medea"
 date: "5/12/2021"
 output:
@@ -100,7 +100,7 @@ Our goal is to see if we can predict results using different kind of methods. Fo
 
 We will use train method from caret package.
 
-But first we need to divide dataset into the train & test sets, we will divide data set into two parts:  70% for training and 30% for test. 
+But first we need to divide dataset into the train & test sets, we will divide data set into two parts:  70% for training and 30% for test. We considered to use 90%/10% but since in that case test set was a really small we discarded the idea.
 
 *Please take in consideration that although analysis was performed on "R version 4.0.2 (2020-06-22), we have not used sample.kind="Rounding" on the seed, since we find it redundant to be compatible with 3.5*
 
