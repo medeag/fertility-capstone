@@ -109,7 +109,7 @@ results <- results %>% add_row(method = "Random Forest", accuracy=(mean(predicti
 #print results
 results
 
-#print max result method(s)
+#print max result method(s), in theory several method could give the same result (not in our case)
 results[which(results$accuracy == max(results$accuracy)),]$method
 
 
